@@ -44,10 +44,10 @@ function App() {
 
   return (
     <div
-      className="bg-black text-slate-300 font-mono text-sm min-h-screen flex justify-center items-center px-4 py-6 sm:px-10"
+      className="bg-black text-slate-300 font-mono text-sm min-h-screen flex justify-center items-center p-4"
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="w-full max-w-3xl">
+      <div className="w-full max-w-3xl flex flex-col">
         {/* Terminal Header */}
         <div className="bg-gray-900 text-white px-4 py-2 rounded-t-md flex items-center justify-between border border-b-0 border-green-500">
           <span className="text-xs sm:text-sm font-semibold tracking-wide">
@@ -61,7 +61,7 @@ function App() {
         {/* Terminal Body */}
         <div
           ref={terminalRef}
-          className="max-h-[calc(100vh-8rem)] bg-black w-full h-full overflow-y-auto whitespace-pre-wrap border border-green-500 rounded-b-md p-4"
+          className="bg-black border border-green-500 rounded-b-md p-4 flex-1 overflow-y-auto whitespace-pre-wrap max-h-[80vh] sm:max-h-[70vh]"
         >
           {history.map((line, i) => (
             <div
@@ -70,14 +70,17 @@ function App() {
               dangerouslySetInnerHTML={{ __html: line }}
             />
           ))}
-          <form onSubmit={handleSubmit} className="flex items-center">
-            <span className="text-green-400 mr-2 select-none">$yaferdev/</span>
+
+          <form onSubmit={handleSubmit} className="flex items-center mt-2">
+            <span className="text-green-400 mr-2 select-none shrink-0">
+              $yaferdev/
+            </span>
             <input
               ref={inputRef}
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="bg-black text-green-400 focus:outline-none caret-green-400 w-full animate-blink"
+              className="bg-black text-green-400 focus:outline-none caret-green-400 w-full sm:text-base text-sm truncate"
               autoComplete="off"
               spellCheck="false"
             />
