@@ -40,7 +40,7 @@ const getRandomQuote = createRandomQueue(quotes);
 
 const commands = {
   help: `Available commands:
-  about, careers, skills, projects, contact, services, resume, clear, quote, joke,`,
+  about, careers, skills, projects, contact, services, certificates, resume, clear, quote, joke,`,
 
   about: `
 --About Me--
@@ -112,7 +112,11 @@ Learning:
 - SEO Optimization: Improving website visibility and ranking using SEO best practices.
 - Website Maintenance: Keeping websites secure, updated, and running smoothly.
 `,
+  certificates: `
+--Certifications--
 
+1. <a href="/freecodecamp.org_certification_yaferdln_responsive-web-design.pdf" target="_blank" class="underline text-green-400 hover:text-green-300">Responsive Web Design - Freecodecamp</a>
+  `,
   contact: `
 --Let's connect--
 
