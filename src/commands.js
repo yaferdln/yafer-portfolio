@@ -39,8 +39,9 @@ const getRandomJoke = createRandomQueue(jokes);
 const getRandomQuote = createRandomQueue(quotes);
 
 const commands = {
-  help: `Available commands:
-  about, careers, skills, projects, contact, services, certificates, resume, clear, quote, joke,`,
+  help: `
+Available commands:
+about, careers, skills, projects, contact, services, certificates, resume, clear, quote, joke,`,
 
   about: `
 --About Me--
